@@ -76,3 +76,11 @@ To deploy your local project to Vercel, push it to GitHub/GitLab/Bitbucket and [
 Alternatively, you can deploy using our template by clicking on the Deploy button below.
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-mongodb&project-name=with-mongodb&repository-name=with-mongodb&env=MONGODB_URI,MONGODB_DB&envDescription=Required%20to%20connect%20the%20app%20with%20MongoDB)
+
+#### UI 
+
+Apparently, react-bootstrap and bootstrap-icons are good options for displaying icons and setting the basic styling for this particular project.
+
+#### Challenges
+
+The UI will not re-render if the component state does not change. In order to fix it, I tried to debug and log every single possible variables. It took me a couple of days due to a lack of knowledge in the backend, server, mongoose, mongodb terms and et cetera. Eventually, I found that I did not extract data correctly after `.then` chaining method. Some of the code I borrowed from a dated project but I want to use it with latast technologies and a newest version of UI library. So I mixed thigs up and made it worst for myself. To assist future junior devs, I would recommend you to stick with a few technologies at a time if it does not provide the tool you need, try to look on a place like `stackoverflow` or github repo discussion of a specific project or library. If still not succeed, give up that idea and find something else to do ASAP. Do not waste you time on just one little detail. Finish other tasks and by the time you are completing other tasks, it will come to your mind surprisingly out of nowhere. 
