@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Link from 'next/link';
 import dbConnect from '../lib/dbConnect';
 
 export default function Home({ isConnected }) {
@@ -11,7 +12,7 @@ export default function Home({ isConnected }) {
 
       <main>
         <h1 className='title'>
-          Welcome to <a href='https://nextjs.org'>Next.js with MongoDB!</a>
+          Welcome to <Link href='https://nextjs.org' passHref><a>JS Journey Collection</a></Link>
         </h1>
 
         {isConnected ? (
@@ -28,33 +29,38 @@ export default function Home({ isConnected }) {
         </p>
 
         <div className='grid'>
-          <a href='https://nextjs.org/docs' className='card'>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href='https://nextjs.org/learn' className='card'>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href='https://github.com/vercel/next.js/tree/canary/examples'
-            className='card'
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href='https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app'
-            className='card'
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+          <Link href='/todo' passHref>
+            <a className='card'>
+              <h3>Todo App &rarr;</h3>
+              <p>
+                Just a simple todo app with toggling, adding, and removing features.
+              </p>
+            </a>
+          </Link>
+          <Link href='/todo' passHref>
+            <a className='card'>
+              <h3>Second App &rarr;</h3>
+              <p>
+              Just a simple deployment your Next.js site to a public URL with Vercel.
+              </p>
+            </a>
+          </Link>
+          <Link href='/todo' passHref>
+            <a className='card'>
+              <h3>Third App &rarr;</h3>
+              <p>
+                Third App can be anything deploy your Next.js site to a public URL with Mercol.
+              </p>
+            </a>
+          </Link>
+          <Link href='/todo' passHref>
+            <a className='card'>
+              <h3>Fourth App &rarr;</h3>
+              <p>
+                Fouth Software Meteor.js site to a public URL with love and happiness for you.
+              </p>
+            </a>
+          </Link>
         </div>
       </main>
 

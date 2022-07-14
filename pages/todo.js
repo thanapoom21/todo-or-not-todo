@@ -12,7 +12,13 @@ const Todo = ({ todos }) => {
   return (
     <Container>
       <Row>
-        <Col md={{ offset: 3, span: 6 }}>
+        <Col md={{  span: 12 }}>
+          <h1>Todo App - Connected with MongoDB with Mongoose</h1>
+          <hr />
+        </Col>
+      </Row>
+      <Row>
+        <Col md={{ offset: 3,  span: 6 }}>
           <TodoListCard todoItems={todos} />
         </Col>
       </Row>
@@ -50,7 +56,11 @@ const TodoListCard = ({ todoItems }) => {
 
   return (
     <>
-      <AddItemForm onNewItem={onNewItem} />
+      {items.length <= 10 ? (
+        <AddItemForm onNewItem={onNewItem} />
+      ) : (
+        <h1 className='text-center'>You have too many items!</h1>
+      )}
       {items.length === 0 && (
         <p className='text-center'>No items yet! Add one above!</p>
       )}
