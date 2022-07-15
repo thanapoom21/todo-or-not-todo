@@ -37,11 +37,11 @@ export default function Home({ isConnected }) {
               </p>
             </a>
           </Link>
-          <Link href='/todo' passHref>
+          <Link href='/pokemon-list' passHref>
             <a className='card'>
-              <h3>Second App &rarr;</h3>
+              <h3>PokemonList App &rarr;</h3>
               <p>
-              Just a simple deployment your Next.js site to a public URL with Vercel.
+              Just a simple Pokemon app that shows its name, type and cute image.
               </p>
             </a>
           </Link>
