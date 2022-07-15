@@ -1,13 +1,12 @@
-## Todo app using NextJS and MongoDB
+## Simple apps using NextJS and MongoDB
 
-[MongoDB](https://www.mongodb.com/) is a general purpose, document-based, distributed database built for modern application developers and for the cloud era. This example will show you how to connect to and use MongoDB as your backend for your Next.js app.
+[NextJS](https://nextjs.org/) is a flexible React framework that will help you create a web application in no time. However, you have to be patient with it if you do not have some experience with any framework before. It will be confusing at first but you'll get better when you learn more about it.
 
-If you want to learn more about MongoDB, visit the following pages:
+[MongoDB](https://www.mongodb.com/) is a general purpose, document-based, distributed database built for modern application developers and for the cloud era. This example will show you how to connect to and use MongoDB as your backend for your Next.js app. Mongoose is installed in this repo to help with Schema and Models of the database. First of all, you're gonna need to know the difference of database, collection, and document, how to connect to a certain project and database, how mongoose know which collection to use, how Schema works, and many more. Then how can you GET, POST, PUT or edit, DELETE data on the database with CRUD operations
 
-- [MongoDB Atlas](https://mongodb.com/atlas)
-- [MongoDB Documentation](https://docs.mongodb.com/)
+[Mongoose](https://mongoosejs.com/) provides a straight-forward, schema-based solution to model your application data. It includes built-in type casting, validation, query building, business logic hooks and more, out of the box.
 
-## Deploy your own
+## Deployment
 
 Once you have access to the environment variables you'll need, deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example):
 
@@ -15,21 +14,15 @@ Once you have access to the environment variables you'll need, deploy the exampl
 
 ## Configuration
 
-### Set up a MongoDB database
-
-Set up a MongoDB database either locally or with [MongoDB Atlas for free](https://mongodb.com/atlas).
-
 ### Set up environment variables
 
-Copy the `env.local.example` file in this directory to `.env.local` (which will be ignored by Git):
+create `.env.local` (which will be ignored by Git):
+
+This repo uses the MongoDB's native drivers to connect the app to Mongo cluster.
 
 ```bash
-cp .env.local.example .env.local
+MONGODB_URI=mongodb+srv://<username>:<password>@<projectname>.2cspo.mongodb.net/<databasename>?retryWrites=true&w=majority
 ```
-
-Set each variable on `.env.local`:
-
-- `MONGODB_URI` - Your MongoDB connection string. If you are using [MongoDB Atlas](https://mongodb.com/atlas) you can find this by clicking the "Connect" button for your cluster.
 
 ### Run Next.js in development mode
 
@@ -43,10 +36,35 @@ yarn install
 yarn dev
 ```
 
-#### UI 
+### Build Next.js for production
 
-Apparently, react-bootstrap and bootstrap-icons are good options for displaying icons and setting the basic styling for this particular project.
+```bash
+npm run build
+npm start
 
-#### Challenges
+# or
 
-The UI will not re-render if the component state does not change. In order to fix it, I tried to debug and log every single possible variables. It took me a couple of days due to a lack of knowledge in the backend, server, mongoose, mongodb terms and et cetera. Eventually, I found that I did not extract data correctly after `.then` chaining method. Some of the code I borrowed from a dated project but I want to use it with latast technologies and a newest version of UI library. So I mixed thigs up and made it worst for myself. To assist future junior devs, I would recommend you to stick with a few technologies at a time if it does not provide the tool you need, try to look on a place like `stackoverflow` or github repo discussion of a specific project or library. If still not succeed, give up that idea and find something else to do ASAP. Do not waste you time on just one little detail. Finish other tasks and by the time you are completing other tasks, it will come to your mind surprisingly out of nowhere. 
+yarn build
+yarn start
+```
+
+### UI
+
+Apparently, [React-Bootstrap](https://react-bootstrap.github.io/) & [Bootstrap-Icons](https://icons.getbootstrap.com/) are good options for displaying icons and setting the basic styling for this particular project. Bootstrap is a big community and has been helping many designers & developers for decades. There are many options out there that you can implement with your projects. So choose wisely and read the documentation thoroughly.
+
+### Formatting & Liting
+
+Obviously, Prettier & ESLint are the best options as of today. However, the configuration is key and it can be a mess if you do not configure it well enough. 
+#### Starting from `order of precedence`
+
+- A "prettier" key in your package.json file.
+- A .prettierrc file written in JSON or YAML.
+- A .prettierrc.json, .prettierrc.yml, .prettierrc.yaml, or .prettierrc.json5 file.
+- A .prettierrc.js, .prettierrc.cjs, prettier.config.js, or prettier.config.cjs file that exports an object using module.exports.
+- A .prettierrc.toml file.
+
+### Challenges
+
+The UI will not re-render if the component state does not change. In order to fix it, I tried to debug and log every single possible variables. It took me a couple of days due to a lack of knowledge in the backend, server, mongoose, mongodb terms and et cetera. Eventually, I found that I did not extract data correctly after `.then` chaining method. Some of the code I borrowed from a dated project but I want to use it with latast technologies and a newest version of UI library. So I mixed thigs up and made it worst for myself. To assist future junior devs, I would recommend you to stick with a few technologies at a time if it does not provide the tool you need, try to look on a place like `stackoverflow` or `github` repo discussion of a specific project or library. If still not succeed, give up that idea and find something else to do ASAP. Do not waste you time on just one little detail. Finish other tasks and by the time you are completing other tasks, it will come to your mind surprisingly out of nowhere.
+
+Promise with async & await could be the culprit some time if you forget to add the keywords.
