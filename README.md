@@ -24,6 +24,14 @@ This repo uses the MongoDB's native drivers to connect the app to Mongo cluster.
 MONGODB_URI=mongodb+srv://<username>:<password>@<projectname>.2cspo.mongodb.net/<databasename>?retryWrites=true&w=majority
 ```
 
+#### To run this repo on Docker container
+
+Build docker image from Dockerfile in this repo. I'd recommend wrap the environment name and value in quotes and don't forget to replace (<username>, <password>, <projectname>, <databasename>) to match your values.
+
+```bash
+docker build -t name-of-the-image-you-wanna-use --build-arg "MONGODB_URI=mongodb+srv://<username>:<password>@<projectname>.2cspo.mongodb.net/<databasename>?retryWrites=true&w=majority" .
+```
+
 ### Run Next.js in development mode
 
 ```bash
@@ -52,9 +60,10 @@ yarn start
 
 Apparently, [React-Bootstrap](https://react-bootstrap.github.io/) & [Bootstrap-Icons](https://icons.getbootstrap.com/) are good options for displaying icons and setting the basic styling for this particular project. Bootstrap is a big community and has been helping many designers & developers for decades. There are many options out there that you can implement with your projects. So choose wisely and read the documentation thoroughly.
 
-### Formatting & Liting
+### Formatting & Linting
 
-Obviously, Prettier & ESLint are the best options as of today. However, the configuration is key and it can be a mess if you do not configure it well enough. 
+Obviously, Prettier & ESLint are the best options as of today. However, the configuration is key and it can be a mess if you do not configure it well enough.
+
 #### Starting from `order of precedence`
 
 - A "prettier" key in your package.json file.
@@ -65,6 +74,10 @@ Obviously, Prettier & ESLint are the best options as of today. However, the conf
 
 ### Challenges
 
-The UI will not re-render if the component state does not change. In order to fix it, I tried to debug and log every single possible variables. It took me a couple of days due to a lack of knowledge in the backend, server, mongoose, mongodb terms and et cetera. Eventually, I found that I did not extract data correctly after `.then` chaining method. Some of the code I borrowed from a dated project but I want to use it with latast technologies and a newest version of UI library. So I mixed thigs up and made it worst for myself. To assist future junior devs, I would recommend you to stick with a few technologies at a time if it does not provide the tool you need, try to look on a place like `stackoverflow` or `github` repo discussion of a specific project or library. If still not succeed, give up that idea and find something else to do ASAP. Do not waste you time on just one little detail. Finish other tasks and by the time you are completing other tasks, it will come to your mind surprisingly out of nowhere.
+The UI will not re-render if the component state does not change. In order to fix it, I tried to debug and log every single possible variables. It took me a couple of days due to a lack of knowledge in the backend, server, mongoose, mongodb terms and et cetera.
+
+Eventually, I found that I did not extract data correctly after `.then` chaining method. Some of the code I borrowed from a outdated project but I want to use it with latast technologies and a newest version of UI library. So I mixed thigs up and made it worst for myself. To assist future junior devs, I would recommend you to stick with a few technologies at a time if it does not provide the tool you need, try to look on a place like `stackoverflow` or `github` repo discussion of a specific project or library. If still not succeed, give up that idea and find something else to do ASAP. Do not waste you time on just one little detail. Finish other tasks and by the time you are completing a task or a project, it will come to your mind surprisingly out of nowhere.
+
+Sometimes, I forgot to and a set of parentheses after `.json`. Also, I accidentally used curly braces without an explicit return keyword to render a component and I didn't know why nothing showed up on the screen. There was no errors whatsoever so I decided to remove the code that map over an array and here we go I found the culprit. It's the braces.
 
 Promise with async & await could be the culprit some time if you forget to add the keywords.
