@@ -26,7 +26,7 @@ MONGODB_URI=mongodb+srv://<username>:<password>@<projectname>.2cspo.mongodb.net/
 
 #### To run this repo on Docker container
 
-Build docker image from Dockerfile in this repo. I'd recommend wrap the environment name and value in quotes and don't forget to replace (<username>, <password>, <projectname>, <databasename>) to match your values.
+Build docker image from Dockerfile in this repo. I'd recommend wrap the environment name and value in quotes and don't forget to replace (username, password, projectname, databasename) to match your values.
 
 ```bash
 docker build -t name-of-the-image-you-wanna-use --build-arg "MONGODB_URI=mongodb+srv://<username>:<password>@<projectname>.2cspo.mongodb.net/<databasename>?retryWrites=true&w=majority" .
