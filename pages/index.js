@@ -24,10 +24,6 @@ export default function Home({ isConnected }) {
           </h2>
         )}
 
-        <p className='description'>
-          Get started by editing <code>pages/index.js</code>
-        </p>
-
         <div className='grid'>
           <Link href='/todo' passHref>
             <a className='card'>
@@ -41,38 +37,32 @@ export default function Home({ isConnected }) {
             <a className='card'>
               <h3>PokemonList App &rarr;</h3>
               <p>
-              Just a simple Pokemon app that shows its name, type and cute image.
+                Just a simple Pokemon app that shows its name, type and cute image.
               </p>
             </a>
           </Link>
-          <Link href='/todo' passHref>
-            <a className='card'>
-              <h3>Third App &rarr;</h3>
-              <p>
-                Third App can be anything deploy your Next.js site to a public URL with Mercol.
-              </p>
-            </a>
-          </Link>
-          <Link href='/todo' passHref>
-            <a className='card'>
-              <h3>Fourth App &rarr;</h3>
-              <p>
-                Fouth Software Meteor.js site to a public URL with love and happiness for you.
-              </p>
-            </a>
-          </Link>
+
+          <a className='card'>
+            <h3>Upcoming App &rarr;</h3>
+            <p>
+              Third App can be anything deploy your Next.js site to a public URL with Mercol.
+            </p>
+          </a>
+
+          <a className='card'>
+            <h3>Upcoming App &rarr;</h3>
+            <p>
+              Fouth Software Meteor.js site to a public URL with love and happiness for you.
+            </p>
+          </a>
+
         </div>
       </main>
 
       <footer>
-        <a
-          href='https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app'
-          target='_blank'
-          rel='noopener noreferrer'
-        >
-          Powered by{' '}
-          <img src='/vercel.svg' alt='Vercel Logo' className='logo' />
-        </a>
+        <p>
+          Powered by Me
+        </p>
       </footer>
 
       <style jsx>{`
