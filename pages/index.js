@@ -2,7 +2,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import dbConnect from '../lib/dbConnect';
 
-export default function Home({ isConnected }) {
+export default function Home({  }) {
   return (
     <div className='container'>
       <Head>
@@ -11,18 +11,20 @@ export default function Home({ isConnected }) {
       </Head>
 
       <main>
-        <h1 className='title'>
-          Welcome to <Link href='https://nextjs.org' passHref><a>JS Journey Collection</a></Link>
-        </h1>
+        <div className='grid'>
+          <h1 className='title'>
+            Welcome to Play Area
+          </h1>
 
-        {isConnected ? (
-          <h2 className='subtitle'>You are connected to MongoDB</h2>
-        ) : (
-          <h2 className='subtitle'>
-            You are NOT connected to MongoDB. Check the <code>README.md</code>{' '}
-            for instructions.
-          </h2>
-        )}
+          {/* {isConnected ? (
+            <h2 className='subtitle'>You are connected to MongoDB</h2>
+          ) : (
+            <h2 className='subtitle'>
+              You are NOT connected to MongoDB. Check the <code>README.md</code>{' '}
+              for instructions.
+            </h2>
+          )} */}
+        </div>
 
         <div className='grid'>
           <Link href='/todo' passHref>
@@ -55,13 +57,27 @@ export default function Home({ isConnected }) {
               Fouth Software Meteor.js site to a public URL with love and happiness for you.
             </p>
           </a>
+          
+          <a className='card'>
+            <h3>Upcoming App &rarr;</h3>
+            <p>
+              Third App can be anything deploy your Next.js site to a public URL with Mercol.
+            </p>
+          </a>
+
+          <a className='card'>
+            <h3>Upcoming App &rarr;</h3>
+            <p>
+              Fouth Software Meteor.js site to a public URL with love and happiness for you.
+            </p>
+          </a>
 
         </div>
       </main>
 
       <footer>
         <p>
-          Powered by Me
+          Powered by musii
         </p>
       </footer>
 
@@ -109,7 +125,7 @@ export default function Home({ isConnected }) {
         }
 
         .title a {
-          color: #0070f3;
+          color: #F25F5C;
           text-decoration: none;
         }
 
@@ -155,7 +171,7 @@ export default function Home({ isConnected }) {
           flex-wrap: wrap;
 
           max-width: 800px;
-          margin-top: 3rem;
+          margin-top: 2rem;
         }
 
         .card {
@@ -173,8 +189,8 @@ export default function Home({ isConnected }) {
         .card:hover,
         .card:focus,
         .card:active {
-          color: #0070f3;
-          border-color: #0070f3;
+          color: #F25F5C;
+          border-color: #F25F5C;
         }
 
         .card h3 {
@@ -192,7 +208,7 @@ export default function Home({ isConnected }) {
           height: 1em;
         }
 
-        @media (max-width: 600px) {
+        @media (max-width: 767px) {
           .grid {
             width: 100%;
             flex-direction: column;
