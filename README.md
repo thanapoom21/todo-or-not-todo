@@ -14,6 +14,8 @@ Once you have access to the environment variables you'll need, deploy the exampl
 
 ## Configuration
 
+To build this image from Dockerfile, I use a template provided by one of the NextJS examples. They created multi-stage builds which help eliminate potential errors that might occur in the process of building and avoid leaking sensitive information. Also, we can use a bigger Docker base image to install our necessary dependencies, compile any native npm packages if needed, most importantly duplicate those artifacts into a small production base image.
+
 ### Set up environment variables
 
 create `.env.local` (which will be ignored by Git):
@@ -81,3 +83,12 @@ Eventually, I found that I did not extract data correctly after `.then` chaining
 Sometimes, I forgot to and a set of parentheses after `.json`. Also, I accidentally used curly braces without an explicit return keyword to render a component and I didn't know why nothing showed up on the screen. There was no errors whatsoever so I decided to remove the code that map over an array and here we go I found the culprit. It's the braces.
 
 Promise with async & await could be the culprit some time if you forget to add the keywords.
+
+### Questions & Answers
+
+1. How can I update the running container without killing it?
+2. Is multi-stage build necessary for most projects?
+3. For personal project or app, would you recommend using Bind Mount to Volume?
+4. Can I build an app that has multiple services without using docker-compose?
+5. Why do we need CMD instruction at the end of the Dockerfile?
+6. Is USER instruction necessary in every node application?
