@@ -60,7 +60,7 @@ yarn start
 
 ### UI
 
-Apparently, [React-Bootstrap](https://react-bootstrap.github.io/) & [Bootstrap-Icons](https://icons.getbootstrap.com/) are good options for displaying icons and setting the basic styling for this particular project. Bootstrap is a big community and has been helping many designers & developers for decades. There are many options out there that you can implement with your projects. So choose wisely and read the documentation thoroughly.
+Apparently, [React-Bootstrap](https://react-bootstrap.github.io/) & [Bootstrap-Icons](https://icons.getbootstrap.com/) are good options for displaying icons and styling your particular project. Bootstrap has a big community and has been helping many designers & developers for such a long time. There are many options out there that you can use & implement with your projects. So choose wisely and read the documentation thoroughly.
 
 ### Formatting & Linting
 
