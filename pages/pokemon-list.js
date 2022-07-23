@@ -36,7 +36,7 @@ const PokemonList = () => {
   }, []);
 
   return (
-    <Container>
+    <Container className='d-flex flex-column justify-content-center mt-5'>
       <Row>
         <Col md={{ span: 12 }}>
           <h1>PokemonList App</h1>
@@ -45,10 +45,12 @@ const PokemonList = () => {
       </Row>
       <Row>
         <Col>
-          <Button variant="outline-primary" onClick={() => getPokemons()}>Get Pokemon</Button>
+          <Button variant='outline-primary' onClick={() => getPokemons()}>
+            Get Pokemon
+          </Button>
         </Col>
       </Row>
-      <Row xs={1} md={6} className="g-4">
+      <Row xs={1} md={6} className='my-2 gy-2'>
         {allPokemons.map((pokemon, index) => {
           const { id, name, sprites, types, abilities } = pokemon;
           return (
@@ -58,7 +60,7 @@ const PokemonList = () => {
               name={name}
               image={sprites.other['official-artwork'].front_default}
               type={types[0].type.name}
-              ability={abilities[0].ability.name}
+              abilities={abilities}
             />
           );
         })}
@@ -67,23 +69,25 @@ const PokemonList = () => {
   );
 };
 
-const PokemonCard = ({ id, name, image, type, ability }) => {
+const PokemonCard = ({ id, name, image, type, abilities }) => {
   return (
-    <Col xs={6} md={4} lg={2}>
+    <Col xs={6} md={4} lg={3}>
       <Card>
         <Card.Img variant='top' src={image} alt={name} />
         <Card.Body>
           <Card.Title className='fs-6'>{name.toUpperCase()}</Card.Title>
           <Card.Text>Type : {type}</Card.Text>
         </Card.Body>
-        <ListGroup className="list-group-flush">
-          
-            <ListGroup.Item>{ability}</ListGroup.Item>
-          
+        <ListGroup className='list-group-flush'>
+          {abilities.map((obj, i) => {
+            return (
+              <ListGroup.Item key={i}>Ability: {obj.ability.name}</ListGroup.Item>
+            )
+          })}
         </ListGroup>
-        <Card.Body>
-          <Card.Link href="#">Learn More</Card.Link>
-        </Card.Body>
+        {/* <Card.Body>
+          <Card.Link href='#'>Learn More</Card.Link>
+        </Card.Body> */}
       </Card>
     </Col>
   );

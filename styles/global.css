@@ -1,8 +1,3 @@
-body {
-  background-color: #f4f4f4;
-  margin-top: 50px;
-}
-
 .item {
   background-color: white;
   padding: 15px;
@@ -101,8 +96,4 @@ button:focus {
   background-color: #fff;
   color: #dedbdb;
   border-color: #dedbdb;
-}
-
-footer {
-  text-align: center;
 }

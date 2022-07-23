@@ -10,15 +10,15 @@ import Item from '../models/Item';
 
 const Todo = ({ todos }) => {
   return (
-    <Container>
+    <Container className='d-flex flex-column justify-content-center mt-5'>
       <Row>
-        <Col md={{  span: 12 }}>
+        <Col md={{ span: 12 }}>
           <h1>Todo App - Connected with MongoDB with Mongoose</h1>
           <hr />
         </Col>
       </Row>
       <Row>
-        <Col md={{ offset: 3,  span: 6 }}>
+        <Col md={{ offset: 3, span: 6 }}>
           <TodoListCard todoItems={todos} />
         </Col>
       </Row>

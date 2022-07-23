@@ -8,14 +8,14 @@ import dbConnect from '../lib/dbConnect';
 
 export default function Home({ isConnected }) {
   return (
-    <Container>
+    <>
       <Head>
-        <title>Create Next App</title>
+        <title>Todo or Not Todo Play Area</title>
         <link rel='icon' href='/favicon.ico' />
       </Head>
 
       <main>
-        <Container className='landing'>
+        <Container className='landing d-flex flex-column justify-content-center mt-5'>
           <h1 className='title'>
             Welcome to Play Area
           </h1>
@@ -86,13 +86,13 @@ export default function Home({ isConnected }) {
         </Container>
       </main>
 
-      <footer>
+      <footer className='justify-content-center d-flex'>
         <p>
           Powered by musii
         </p>
       </footer>
 
-    </Container>
+    </>
   )
 }
 
