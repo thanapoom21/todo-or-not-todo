@@ -71,7 +71,7 @@ const PokemonList = () => {
 
 const PokemonCard = ({ id, name, image, type, abilities }) => {
   return (
-    <Col xs={6} md={4} lg={3}>
+    <Col xs={12} sm={6} md={4} lg={3} xl={2}>
       <Card>
         <Card.Img variant='top' src={image} alt={name} />
         <Card.Body>
