@@ -16,9 +16,7 @@ export default function Home({ isConnected }) {
 
       <main>
         <Container className='landing d-flex flex-column justify-content-center mt-5'>
-          <h1 className='title'>
-            Welcome to Play Area
-          </h1>
+          <h1 className='title'>Welcome to Play Area</h1>
 
           {isConnected ? (
             <h2 className='subtitle'>You are connected to MongoDB</h2>
@@ -35,7 +33,8 @@ export default function Home({ isConnected }) {
                 <a className='card'>
                   <h3>Todo App &rarr;</h3>
                   <p>
-                    Just a simple todo app with toggling, adding, and removing features. 10 items limited.
+                    Just a simple todo app with toggling, adding, and removing
+                    features. 10 items limited.
                   </p>
                 </a>
               </Link>
@@ -45,7 +44,30 @@ export default function Home({ isConnected }) {
                 <a className='card'>
                   <h3>Pokemon App &rarr;</h3>
                   <p>
-                    Just a simple Pokemon app that shows its name, type and cute image.
+                    Just a simple Pokemon app that shows its name, type and cute
+                    image.
+                  </p>
+                </a>
+              </Link>
+            </Col>
+            <Col md={6} lg={4}>
+              <Link href='/calculator' passHref>
+                <a className='card'>
+                  <h3>Calculator App &rarr;</h3>
+                  <p>
+                    Just a simple calculator app that shows its operation,
+                    results and other features.
+                  </p>
+                </a>
+              </Link>
+            </Col>
+            <Col md={6} lg={4}>
+              <Link href='/clock' passHref>
+                <a className='card'>
+                  <h3>Clock App &rarr;</h3>
+                  <p>
+                    Just a simple calculator app that shows its operation,
+                    results and other features.
                   </p>
                 </a>
               </Link>
@@ -54,7 +76,8 @@ export default function Home({ isConnected }) {
               <a className='card disabled-item'>
                 <h3>Upcoming App &rarr;</h3>
                 <p>
-                  Third App can be anything deploy your Next.js site to a public URL with Mercol.
+                  Third App can be anything deploy your Next.js site to a public
+                  URL with Mercol.
                 </p>
               </a>
             </Col>
@@ -62,23 +85,8 @@ export default function Home({ isConnected }) {
               <a className='card disabled-item'>
                 <h3>Upcoming App &rarr;</h3>
                 <p>
-                  Fouth Software Meteor.js site to a public URL with love and happiness for you.
-                </p>
-              </a>
-            </Col>
-            <Col md={6} lg={4}>
-              <a className='card disabled-item'>
-                <h3>Upcoming App &rarr;</h3>
-                <p>
-                  Third App can be anything deploy your Next.js site to a public URL with Mercol.
-                </p>
-              </a>
-            </Col>
-            <Col md={6} lg={4}>
-              <a className='card disabled-item'>
-                <h3>Upcoming App &rarr;</h3>
-                <p>
-                  Fouth Software Meteor.js site to a public URL with love and happiness for you.
+                  Fouth Software Meteor.js site to a public URL with love and
+                  happiness for you.
                 </p>
               </a>
             </Col>
@@ -87,13 +95,10 @@ export default function Home({ isConnected }) {
       </main>
 
       <footer className='justify-content-center d-flex'>
-        <p>
-          Powered by musii
-        </p>
+        <p>Powered by musii</p>
       </footer>
-
     </>
-  )
+  );
 }
 
 export async function getServerSideProps(context) {
