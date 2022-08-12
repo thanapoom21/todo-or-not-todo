@@ -97,3 +97,82 @@ button:focus {
   color: #dedbdb;
   border-color: #dedbdb;
 }
+
+/* Start Calculator app */
+@import 'https://fonts.googleapis.com/css?family=Share+Tech+Mono';
+@font-face {
+  font-family: "Digital";
+  src: url("//db.onlinewebfonts.com/t/8e22783d707ad140bffe18b2a3812529.eot");
+  src: url("//db.onlinewebfonts.com/t/8e22783d707ad140bffe18b2a3812529.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/8e22783d707ad140bffe18b2a3812529.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/8e22783d707ad140bffe18b2a3812529.woff") format("woff"), url("//db.onlinewebfonts.com/t/8e22783d707ad140bffe18b2a3812529.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/8e22783d707ad140bffe18b2a3812529.svg#Digital-7") format("svg");
+}
+
+.calculator {
+  padding: 0.2em;
+  background: rgb(221, 71, 71);
+  max-width: 100%;
+  border-radius: 4px;
+}
+
+.calculator .formulaScreen {
+  padding: 10px 0;
+  font-family: digital;
+  font-size: 2em;
+  color: rgb(225, 146, 0);
+  text-align: right;
+  vertical-align: text-top;
+  line-height: 20px;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
+.calculator .outputScreen {
+  font-size: 1em;
+  font-family: digital;
+  color: white;
+  text-align: right;
+  line-height: 35px;
+}
+
+.calculator button {
+  height: 100px;
+  width: 25%;
+  color: white;
+  border: 0.1px solid rgba(221, 71, 71, 0.5);
+  background: rgb(94, 8, 8);
+  font-size: 2em;
+  cursor: default;
+}
+
+.calculator button:hover {
+  color: rgb(94, 8, 8);
+  background: rgba(94, 8, 8, 0.5);
+  z-index: 3;
+}
+/* End Calculator app */
+
+/* Start Clock app */
+#clockapp .length-control {
+  width: 300px;
+}
+
+#clockapp .timer {
+  border: 2px solid #13353a;
+  width: 100px;
+  border-radius: 10px;
+}
+
+#container .timer #time-left {
+  font-family: digital;
+}
+#container .timer .timer-control button:active {
+  color: #13353a;
+}
+
+#clockapp button {
+  background: none;
+  outline: none;
+  border: none;
+  color: #13353a;
+  cursor: pointer;
+}
+/* End Clock app */
