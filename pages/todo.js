@@ -212,13 +212,13 @@ export const getServerSideProps = async () => {
 
   /* find all the data in our database */
   const result = await Item.find({});
-  const items = result.map((doc) => {
+  const todos = result.map((doc) => {
     const item = doc.toObject();
     item._id = item._id.toString();
     return item;
   });
 
-  return { props: { todos: JSON.parse(JSON.stringify(items)) } };
+  return { props: { todos: todos } };
 };
 
 export default Todo;
