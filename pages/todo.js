@@ -207,7 +207,7 @@ const ItemDisplay = ({ item, onItemUpdate, onItemRemoval }) => {
   );
 };
 
-export const getServerSideProps = async () => {
+export const getStaticProps = async () => {
   await dbConnect();
 
   /* find all the data in our database */
