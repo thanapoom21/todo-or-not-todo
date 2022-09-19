@@ -2,6 +2,7 @@ import React from 'react';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import Button from 'react-bootstrap/Button';
 
 const Square = ({ onClick, value }) => {
   return (
@@ -86,8 +87,8 @@ class Game extends React.Component {
       const desc = move ? 'Go to move #' + move : 'Go to game start';
 
       return (
-        <li key={move}>
-          <button onClick={() => this.jumpTo(move)}>{desc}</button>
+        <li key={move} className='mb-2'>
+          <Button variant='outline-primary' onClick={() => this.jumpTo(move)}>{desc}</Button>
         </li>
       );
     });
