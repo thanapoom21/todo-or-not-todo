@@ -73,13 +73,15 @@ export default function Home({ isConnected }) {
               </Link>
             </Col>
             <Col md={6} lg={4}>
-              <a className='card disabled-item'>
-                <h3>Upcoming App &rarr;</h3>
-                <p>
-                  Third App can be anything deploy your Next.js site to a public
-                  URL with Mercol.
-                </p>
-              </a>
+              <Link href='/tictactoe' passHref>
+                <a className='card'>
+                  <h3>Tic Tac Toe App &rarr;</h3>
+                  <p>
+                    Just a simple calculator app that shows its operation,
+                    results and other features.
+                  </p>
+                </a>
+              </Link>
             </Col>
             <Col md={6} lg={4}>
               <a className='card disabled-item'>

@@ -39,7 +39,7 @@ const PokemonList = () => {
     <Container className='d-flex flex-column justify-content-center mt-5'>
       <Row>
         <Col md={{ span: 12 }}>
-          <h1>PokemonList App</h1>
+          <h1>Pokemon List App</h1>
           <hr />
         </Col>
       </Row>
