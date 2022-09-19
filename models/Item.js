@@ -9,12 +9,6 @@ const ItemSchema = new mongoose.Schema({
     required: [true, 'Please provide a name for this item.'],
     maxlength: [60, 'Name cannot be more than 60 characters'],
   },
-  date: {
-    /** The date and time an item was created  */
-
-    type: Date,
-    default: Date.now,
-  },
   completed: {
     /** The status of TODO items */
 
