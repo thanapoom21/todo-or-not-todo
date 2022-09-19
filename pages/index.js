@@ -90,60 +90,6 @@ export default function Home({ isConnected }) {
                 </p>
               </a>
             </Col>
-            <Col md={6} lg={4}>
-              <a className='card disabled-item'>
-                <h3>Upcoming App &rarr;</h3>
-                <p>
-                  Fouth Software Meteor.js site to a public URL with love and
-                  happiness for you.
-                </p>
-              </a>
-            </Col>
-            <Col md={6} lg={4}>
-              <a className='card disabled-item'>
-                <h3>Upcoming App &rarr;</h3>
-                <p>
-                  Fouth Software Meteor.js site to a public URL with love and
-                  happiness for you.
-                </p>
-              </a>
-            </Col>
-            <Col md={6} lg={4}>
-              <a className='card disabled-item'>
-                <h3>Upcoming App &rarr;</h3>
-                <p>
-                  Fouth Software Meteor.js site to a public URL with love and
-                  happiness for you.
-                </p>
-              </a>
-            </Col>
-            <Col md={6} lg={4}>
-              <a className='card disabled-item'>
-                <h3>Upcoming App &rarr;</h3>
-                <p>
-                  Fouth Software Meteor.js site to a public URL with love and
-                  happiness for you.
-                </p>
-              </a>
-            </Col>
-            <Col md={6} lg={4}>
-              <a className='card disabled-item'>
-                <h3>Upcoming App &rarr;</h3>
-                <p>
-                  Fouth Software Meteor.js site to a public URL with love and
-                  happiness for you.
-                </p>
-              </a>
-            </Col>
-            <Col md={6} lg={4}>
-              <a className='card disabled-item'>
-                <h3>Upcoming App &rarr;</h3>
-                <p>
-                  Fouth Software Meteor.js site to a public URL with love and
-                  happiness for you.
-                </p>
-              </a>
-            </Col>
           </Row>
         </Container>
       </main>
