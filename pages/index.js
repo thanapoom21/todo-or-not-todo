@@ -75,7 +75,7 @@ export default function Home({ isConnected }) {
             <Col md={6} lg={4}>
               <Link href='/tictactoe' passHref>
                 <a className='card'>
-                  <h3>Clock App &rarr;</h3>
+                  <h3>Tic Tac Toe App &rarr;</h3>
                   <p>
                     Just a simple calculator app that shows its operation,
                     results and other features.
