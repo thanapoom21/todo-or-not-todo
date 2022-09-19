@@ -1,45 +1,41 @@
 import React from 'react';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 
-const Square = (props) => {
+const Square = ({ onClick, value }) => {
   return (
-    <button className='square' onClick={props.onClick}>
-      {props.value}
+    <button className='square' onClick={onClick}>
+      {value}
     </button>
   );
 };
 
-class Board extends React.Component {
-  renderSquare(i) {
-    return (
-      <Square
-        value={this.props.squares[i]}
-        onClick={() => this.props.onClick(i)}
-      />
-    );
-  }
+const Board = ({ squares, onClick }) => {
+  const renderSquare = (i) => {
+    return <Square value={squares[i]} onClick={() => onClick(i)} />;
+  };
 
-  render() {
-    return (
-      <div>
-        <div className='board-row'>
-          {this.renderSquare(0)}
-          {this.renderSquare(1)}
-          {this.renderSquare(2)}
-        </div>
-        <div className='board-row'>
-          {this.renderSquare(3)}
-          {this.renderSquare(4)}
-          {this.renderSquare(5)}
-        </div>
-        <div className='board-row'>
-          {this.renderSquare(6)}
-          {this.renderSquare(7)}
-          {this.renderSquare(8)}
-        </div>
+  return (
+    <div>
+      <div className='board-row'>
+        {renderSquare(0)}
+        {renderSquare(1)}
+        {renderSquare(2)}
       </div>
-    );
-  }
-}
+      <div className='board-row'>
+        {renderSquare(3)}
+        {renderSquare(4)}
+        {renderSquare(5)}
+      </div>
+      <div className='board-row'>
+        {renderSquare(6)}
+        {renderSquare(7)}
+        {renderSquare(8)}
+      </div>
+    </div>
+  );
+};
 
 class Game extends React.Component {
   constructor(props) {
@@ -102,18 +98,26 @@ class Game extends React.Component {
       status = 'Next player: ' + (this.state.xIsNext ? 'X' : 'O');
     }
     return (
-      <div className='game'>
-        <div className='game-board'>
-          <Board
-            squares={current.squares}
-            onClick={(i) => this.handleClick(i)}
-          />
+      <Container id="tictactoeapp" className='d-flex flex-column justify-content-center mt-5'>
+        <Row>
+          <Col md={{ span: 12 }}>
+            <h1>Tic Tac Toe App</h1>
+            <hr />
+          </Col>
+        </Row>
+        <div className='game'>
+          <div className='game-board'>
+            <Board
+              squares={current.squares}
+              onClick={(i) => this.handleClick(i)}
+            />
+          </div>
+          <div className='game-info'>
+            <div>{status}</div>
+            <ol>{moves}</ol>
+          </div>
         </div>
-        <div className='game-info'>
-          <div>{status}</div>
-          <ol>{moves}</ol>
-        </div>
-      </div>
+      </Container>
     );
   }
 }
