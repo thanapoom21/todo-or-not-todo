@@ -26,12 +26,20 @@ This repo uses the MongoDB's native drivers to connect the app to Mongo cluster.
 MONGODB_URI=mongodb+srv://<username>:<password>@<projectname>.2cspo.mongodb.net/<databasename>?retryWrites=true&w=majority
 ```
 
-#### To run this repo on Docker container
+#### To build an image with Dockerfile
 
-Build docker image from Dockerfile in this repo. I'd recommend wrap the environment name and value in quotes and don't forget to replace (`<username>`, `<password>`, `<projectname>`, `<databasename>`) to match your values.
+Build docker image from Dockerfile in this repo. Tag name can be changed and `--build-arg` is only for initial container creation.
 
 ```bash
 docker build -t name-of-the-image-you-wanna-use --build-arg "MONGODB_URI=mongodb+srv://<username>:<password>@<projectname>.2cspo.mongodb.net/<databasename>?retryWrites=true&w=majority" .
+```
+
+#### To run this repo on Docker container
+
+I'd recommend wrap the environment name and value in quotes and don't forget to replace (`<username>`, `<password>`, `<projectname>`, `<databasename>`) to match your values. 
+
+```base
+docker run -dp 3333:3000 name-of-the-image-you-wanna-use
 ```
 
 ### Run Next.js in development mode
