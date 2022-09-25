@@ -88,7 +88,9 @@ class Game extends React.Component {
 
       return (
         <li key={move} className='mb-2'>
-          <Button variant='outline-primary' onClick={() => this.jumpTo(move)}>{desc}</Button>
+          <Button variant='outline-primary' onClick={() => this.jumpTo(move)}>
+            {desc}
+          </Button>
         </li>
       );
     });
@@ -99,7 +101,10 @@ class Game extends React.Component {
       status = 'Next player: ' + (this.state.xIsNext ? 'X' : 'O');
     }
     return (
-      <Container id="tictactoeapp" className='d-flex flex-column justify-content-center mt-5'>
+      <Container
+        id='tictactoeapp'
+        className='d-flex flex-column justify-content-center mt-5'
+      >
         <Row>
           <Col md={{ span: 12 }}>
             <h1>Tic Tac Toe App</h1>

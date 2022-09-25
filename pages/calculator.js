@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState } from 'react';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -10,7 +10,7 @@ const isOperator = /[x/+‑]/,
   clearStyle = { background: '#ac3939' },
   operatorStyle = { background: '#bbb' },
   equalsStyle = {
-    background: '#e19200'
+    background: '#e19200',
   };
 
 // Main app
@@ -44,7 +44,8 @@ const Calculator = () => {
         .replace('--', '+0+0+0+0+0+0+');
 
       // eval() is not recommended and should be replaced with other method.
-      let answer = Math.round(1000000000000 * Function(expression)) / 1000000000000;
+      let answer =
+        Math.round(1000000000000 * Function(expression)) / 1000000000000;
 
       setCurrentVal(answer.toString());
       setFormula(
@@ -54,8 +55,8 @@ const Calculator = () => {
           .replace('+0+0+0+0+0+0+', '‑-')
           .replace(/(x|\/|\+)‑/, '$1-')
           .replace(/^‑/, '-') +
-        '=' +
-        answer,
+          '=' +
+          answer,
       );
       setPrevVal(answer);
       setEvaluated(true);
@@ -65,21 +66,24 @@ const Calculator = () => {
   const handleOperators = (e) => {
     if (!currentVal.includes('Limit')) {
       const value = e.target.value;
-      setCurrentVal(value)
-      setEvaluated(false)
+      setCurrentVal(value);
+      setEvaluated(false);
 
       if (evaluated) {
-        setFormula(prevVal + value)
+        setFormula(prevVal + value);
       } else if (!endsWithOperator.test(formula)) {
         setPrevVal(formula);
         setFormula(formula + value);
       } else if (!endsWithNegativeSign.test(formula)) {
-        setFormula((endsWithNegativeSign.test(formula + value) ? formula : prevVal) + value);
+        setFormula(
+          (endsWithNegativeSign.test(formula + value) ? formula : prevVal) +
+            value,
+        );
       } else if (value !== '‑') {
-        setFormula(prevVal + value)
+        setFormula(prevVal + value);
       }
     }
-  }
+  };
 
   const handleNumbers = (e) => {
     if (!currentVal.includes('Limit')) {
@@ -104,8 +108,8 @@ const Calculator = () => {
               ? value
               : formula
             : /([^.0-9]0|^0)$/.test(formula)
-              ? formula.slice(0, -1) + value
-              : formula + value,
+            ? formula.slice(0, -1) + value
+            : formula + value,
         );
       }
     }
@@ -115,11 +119,9 @@ const Calculator = () => {
     if (evaluated === true) {
       setCurrentVal('0.');
       setFormula('0.');
-      setEvaluated(false)
-    } else if (
-      !currentVal.includes('.') && !currentVal.includes('Limit')
-    ) {
-      setEvaluated(false)
+      setEvaluated(false);
+    } else if (!currentVal.includes('.') && !currentVal.includes('Limit')) {
+      setEvaluated(false);
       if (currentVal.length > 21) {
         maxDigitWarning();
       } else if (
@@ -133,7 +135,7 @@ const Calculator = () => {
         setFormula(formula + '.');
       }
     }
-  }
+  };
 
   const initialize = () => {
     setCurrentVal('0');
@@ -152,7 +154,7 @@ const Calculator = () => {
         </Col>
       </Row>
       <Row>
-        <Col className="col-md-6 align-self-center">
+        <Col className='col-md-6 align-self-center'>
           <div className='calculator'>
             <Formula formula={formula.replace(/x/g, '⋅')} />
             <Output currentValue={currentVal} />
@@ -173,7 +175,7 @@ const Calculator = () => {
 const Buttons = ({ evaluate, initialize, decimal, numbers, operators }) => {
   return (
     <div>
-      <Row className="first-row">
+      <Row className='first-row'>
         <Col className='d-flex flex-row'>
           <button
             className='flex-grow-1'
@@ -184,15 +186,27 @@ const Buttons = ({ evaluate, initialize, decimal, numbers, operators }) => {
           >
             AC
           </button>
-          <button className='flex-grow-0' id='divide' onClick={operators} style={operatorStyle} value='/'>
+          <button
+            className='flex-grow-0'
+            id='divide'
+            onClick={operators}
+            style={operatorStyle}
+            value='/'
+          >
             /
           </button>
-          <button className='flex-grow-0' id='multiply' onClick={operators} style={operatorStyle} value='x'>
+          <button
+            className='flex-grow-0'
+            id='multiply'
+            onClick={operators}
+            style={operatorStyle}
+            value='x'
+          >
             x
           </button>
         </Col>
       </Row>
-      <Row className="second-row">
+      <Row className='second-row'>
         <Col className='d-flex flex-row'>
           <button id='seven' onClick={numbers} value='7'>
             7
@@ -203,12 +217,17 @@ const Buttons = ({ evaluate, initialize, decimal, numbers, operators }) => {
           <button id='nine' onClick={numbers} value='9'>
             9
           </button>
-          <button id='subtract' onClick={operators} style={operatorStyle} value='‑'>
+          <button
+            id='subtract'
+            onClick={operators}
+            style={operatorStyle}
+            value='‑'
+          >
             ‑
           </button>
         </Col>
       </Row>
-      <Row className="third-row">
+      <Row className='third-row'>
         <Col className='d-flex flex-row'>
           <button id='four' onClick={numbers} value='4'>
             4
@@ -224,24 +243,40 @@ const Buttons = ({ evaluate, initialize, decimal, numbers, operators }) => {
           </button>
         </Col>
       </Row>
-      <Row className="fourth-row">
+      <Row className='fourth-row'>
         <Col className='d-flex flex-row flex-wrap'>
-          <button className="flex-grow-0" id='one' onClick={numbers} value='1'>
+          <button className='flex-grow-0' id='one' onClick={numbers} value='1'>
             1
           </button>
-          <button className="flex-grow-0" id='two' onClick={numbers} value='2'>
+          <button className='flex-grow-0' id='two' onClick={numbers} value='2'>
             2
           </button>
-          <button className="flex-grow-0" id='three' onClick={numbers} value='3'>
+          <button
+            className='flex-grow-0'
+            id='three'
+            onClick={numbers}
+            value='3'
+          >
             3
           </button>
-          <button className="flex-grow-0" id='equals' onClick={evaluate} style={equalsStyle} value='='>
+          <button
+            className='flex-grow-0'
+            id='equals'
+            onClick={evaluate}
+            style={equalsStyle}
+            value='='
+          >
             =
           </button>
-          <button className="flex-grow-1" id='zero' onClick={numbers} value='0'>
+          <button className='flex-grow-1' id='zero' onClick={numbers} value='0'>
             0
           </button>
-          <button className="flex-grow-0" id='decimal' onClick={decimal} value='.'>
+          <button
+            className='flex-grow-0'
+            id='decimal'
+            onClick={decimal}
+            value='.'
+          >
             .
           </button>
         </Col>

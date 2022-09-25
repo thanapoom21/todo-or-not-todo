@@ -81,8 +81,10 @@ const PokemonCard = ({ id, name, image, type, abilities }) => {
         <ListGroup className='list-group-flush'>
           {abilities.map((obj, i) => {
             return (
-              <ListGroup.Item key={i}>Ability: {obj.ability.name}</ListGroup.Item>
-            )
+              <ListGroup.Item key={i}>
+                Ability: {obj.ability.name}
+              </ListGroup.Item>
+            );
           })}
         </ListGroup>
         {/* <Card.Body>

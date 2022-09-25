@@ -10,13 +10,13 @@ export default function Home({ isConnected }) {
   return (
     <>
       <Head>
-        <title>Todo or Not Todo Play Area</title>
+        <title>Todo or Not Todo Sandbox</title>
         <link rel='icon' href='/favicon.ico' />
       </Head>
 
       <main>
         <Container className='landing d-flex flex-column justify-content-center mt-5'>
-          <h1 className='title'>Welcome to Play Area</h1>
+          <h1 className='title'>Welcome to Sandbox</h1>
 
           {isConnected ? (
             <h2 className='subtitle'>You are connected to MongoDB</h2>
@@ -84,13 +84,15 @@ export default function Home({ isConnected }) {
               </Link>
             </Col>
             <Col md={6} lg={4}>
-              <a className='card disabled-item'>
-                <h3>Upcoming App &rarr;</h3>
-                <p>
-                  Fouth Software Meteor.js site to a public URL with love and
-                  happiness for you.
-                </p>
-              </a>
+              <Link href='/pet-store' passHref>
+                <a className='card'>
+                  <h3>Pet Store App &rarr;</h3>
+                  <p>
+                    Just a simple calculator app that shows its operation,
+                    results and other features.
+                  </p>
+                </a>
+              </Link>
             </Col>
           </Row>
         </Container>
