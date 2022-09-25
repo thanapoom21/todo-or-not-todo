@@ -4,6 +4,8 @@ import Pet from '../models/Pet';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import Button from 'react-bootstrap/Button';
+import Card from 'react-bootstrap/Card';
 
 const PetStore = ({ pets }) => {
   return (
@@ -16,15 +18,23 @@ const PetStore = ({ pets }) => {
           </Col>
         </Row>
         <Row>
-          <Col md={{ offset: 3, span: 6 }}>
-            {/* Create a card for each pet */}
-            {pets.map((pet) => (
-              <div key={pet._id}>
-                <div className='card'>
-                  <img src={pet.image_url} />
-                  <h5 className='pet-name'>{pet.name}</h5>
+          <Col>
+            <Link href="/new">
+              <Button variant='outline-primary'>
+                Add New Pet
+              </Button>
+            </Link>
+          </Col>
+        </Row>
+        <Row xs={1} md={2} xl={4} className='my-2 gy-2'>
+          {/* Create a card for each pet */}
+          {pets.map((pet) => (
+            <Col>
+              <Card key={pet._id}>
+                <Card.Img variant='top' src={pet.image_url} />
+                <Card.Body>
+                  <Card.Title className='pet-name'>Name: {pet.name}</Card.Title>
                   <div className='main-content'>
-                    <p className='pet-name'>{pet.name}</p>
                     <p className='owner'>Owner: {pet.owner_name}</p>
 
                     {/* Extra Pet Info: Likes and Dislikes */}
@@ -45,19 +55,23 @@ const PetStore = ({ pets }) => {
                       </ul>
                     </div>
 
-                    <div className='btn-container'>
+                    <div className='btn-container d-flex justify-content-between'>
                       <Link href='/[id]/edit' as={`/${pet._id}/edit`}>
-                        <button className='btn edit'>Edit</button>
+                        <Button variant='outline-danger' className='btn edit px-4'>
+                          Edit
+                        </Button>
                       </Link>
                       <Link href='/[id]' as={`/${pet._id}`}>
-                        <button className='btn view'>View</button>
+                        <Button variant='primary' className='btn view px-4'>
+                          View
+                        </Button>
                       </Link>
                     </div>
                   </div>
-                </div>
-              </div>
-            ))}
-          </Col>
+                </Card.Body>
+              </Card>
+            </Col>
+          ))}
         </Row>
       </Container>
     </>

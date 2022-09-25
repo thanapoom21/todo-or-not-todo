@@ -42,7 +42,7 @@ const Form = ({ formId, petForm, forNewPet = true }) => {
       const { data } = await res.json();
 
       mutate(`/api/pets/${id}`, data, false); // Update the local data without a revalidation
-      router.push('/');
+      router.push('/pet-store');
     } catch (error) {
       setMessage('Failed to update pet');
     }
@@ -65,7 +65,7 @@ const Form = ({ formId, petForm, forNewPet = true }) => {
         throw new Error(res.status);
       }
 
-      router.push('/');
+      router.push('/pet-store');
     } catch (error) {
       setMessage('Failed to add pet');
     }
