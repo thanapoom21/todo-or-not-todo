@@ -19,16 +19,18 @@ const PetStore = ({ pets }) => {
         </Row>
         <Row>
           <Col>
-            <Link href='/new'>
-              <Button variant='outline-primary'>Add New Pet</Button>
+            <Link href="/new">
+              <Button variant='outline-primary'>
+                Add New Pet
+              </Button>
             </Link>
           </Col>
         </Row>
         <Row xs={1} md={2} xl={4} className='my-2 gy-2'>
           {/* Create a card for each pet */}
           {pets.map((pet) => (
-            <Col>
-              <Card key={pet._id}>
+            <Col key={pet._id}>
+              <Card>
                 <Card.Img variant='top' src={pet.image_url} />
                 <Card.Body>
                   <Card.Title className='pet-name'>Name: {pet.name}</Card.Title>
@@ -55,10 +57,7 @@ const PetStore = ({ pets }) => {
 
                     <div className='btn-container d-flex justify-content-between'>
                       <Link href='/[id]/edit' as={`/${pet._id}/edit`}>
-                        <Button
-                          variant='outline-danger'
-                          className='btn edit px-4'
-                        >
+                        <Button variant='outline-danger' className='btn edit px-4'>
                           Edit
                         </Button>
                       </Link>

@@ -31,7 +31,7 @@ const PetPage = ({ pet }) => {
       <Row>
         <Col></Col>
         <Col xs={8}>
-          <Card key={pet._id}>
+          <Card>
             <Card.Img variant='top' src={pet.image_url} />
             <Card.Body>
               <Card.Title className='pet-name'>Name: {pet.name}</Card.Title>
