@@ -42,6 +42,8 @@ I'd recommend wrap the environment name and value in quotes and don't forget to 
 docker run -dp 3333:3000 name-of-the-image-you-wanna-use
 ```
 
+> If --build-arg is not specified, 500 server error might occur when buiding a docker image.
+
 ### Run Next.js in development mode
 
 ```bash
