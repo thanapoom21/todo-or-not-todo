@@ -2,7 +2,13 @@ import { useState } from 'react';
 import { useRouter } from 'next/router';
 import { mutate } from 'swr';
 
-const Form = ({ formId, petForm, forNewPet = true }) => {
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import Form from 'react-bootstrap/Form';
+import Button from 'react-bootstrap/Button';
+
+const PetForm = ({ formId, petForm, forNewPet = true }) => {
   const router = useRouter();
   const contentType = 'application/json';
   const [errors, setErrors] = useState({});
@@ -104,98 +110,132 @@ const Form = ({ formId, petForm, forNewPet = true }) => {
 
   return (
     <>
-      <form id={formId} onSubmit={handleSubmit}>
-        <label htmlFor='name'>Name</label>
-        <input
-          type='text'
-          maxLength='20'
-          name='name'
-          value={form.name}
-          onChange={handleChange}
-          required
-        />
+      <Container className='d-flex flex-column justify-content-center mt-5'>
+        <Row>
+          <Col md={{ span: 12 }}>
+            <h1>Pokemon List App</h1>
+            <hr />
+          </Col>
+        </Row>
+        <Row>
+          <Col md={{ span: 12 }}>
+            <Form id={formId} onSubmit={handleSubmit}>
+              <Form.Group className="mb-2">
+                <Form.Label htmlFor='name'>Name</Form.Label>
+                <Form.Control
+                  type='text'
+                  maxLength='20'
+                  name='name'
+                  value={form.name}
+                  onChange={handleChange}
+                  required
+                />
+              </Form.Group>
 
-        <label htmlFor='owner_name'>Owner</label>
-        <input
-          type='text'
-          maxLength='20'
-          name='owner_name'
-          value={form.owner_name}
-          onChange={handleChange}
-          required
-        />
+              <Form.Group className="mb-2">
+                <Form.Label htmlFor='owner_name'>Owner</Form.Label>
+                <Form.Control
+                  type='text'
+                  maxLength='20'
+                  name='owner_name'
+                  value={form.owner_name}
+                  onChange={handleChange}
+                  required
+                />
+              </Form.Group>
 
-        <label htmlFor='species'>Species</label>
-        <input
-          type='text'
-          maxLength='30'
-          name='species'
-          value={form.species}
-          onChange={handleChange}
-          required
-        />
+              <Form.Group className="mb-2">
+                <Form.Label htmlFor='species'>Species</Form.Label>
+                <Form.Control
+                  type='text'
+                  maxLength='30'
+                  name='species'
+                  value={form.species}
+                  onChange={handleChange}
+                  required
+                />
+              </Form.Group>
 
-        <label htmlFor='age'>Age</label>
-        <input
-          type='number'
-          name='age'
-          value={form.age}
-          onChange={handleChange}
-        />
+              <Form.Group className="mb-2">
+                <Form.Label htmlFor='age'>Age</Form.Label>
+                <Form.Control
+                  type='number'
+                  name='age'
+                  value={form.age}
+                  onChange={handleChange}
+                />
+              </Form.Group>
 
-        <label htmlFor='huggable'>Can be hugged</label>
-        <input
-          type='checkbox'
-          name='huggable'
-          checked={form.huggable}
-          onChange={handleChange}
-        />
+              <Form.Group className="mb-2">
+                <Form.Label htmlFor='huggable'>Can be hugged</Form.Label>
+                <Form.Check
+                  type='checkbox'
+                  label='huggable RB'
+                  name='huggable'
+                  checked={form.huggable}
+                  onChange={handleChange}
+                />
+              </Form.Group>
 
-        <label htmlFor='diet'>Diet</label>
-        <textarea
-          name='diet'
-          maxLength='60'
-          value={form.diet}
-          onChange={handleChange}
-        />
+              <Form.Group className="mb-2">
+                <Form.Label htmlFor='diet'>Diet</Form.Label>
+                <Form.Control
+                  name='diet'
+                  maxLength='60'
+                  value={form.diet}
+                  onChange={handleChange}
+                />
+              </Form.Group>
 
-        <label htmlFor='image_url'>Image URL</label>
-        <input
-          type='url'
-          name='image_url'
-          value={form.image_url}
-          onChange={handleChange}
-          required
-        />
+              <Form.Group className="mb-2">
+                <Form.Label htmlFor='image_url'>Image URL</Form.Label>
+                <Form.Control
+                  type='url'
+                  name='image_url'
+                  value={form.image_url}
+                  onChange={handleChange}
+                  required
+                />
+              </Form.Group>
 
-        <label htmlFor='likes'>Likes</label>
-        <textarea
-          name='likes'
-          maxLength='60'
-          value={form.likes}
-          onChange={handleChange}
-        />
+              <Form.Group className="mb-2">
+                <Form.Label htmlFor='likes'>Likes</Form.Label>
+                <Form.Control
+                  name='likes'
+                  maxLength='60'
+                  value={form.likes}
+                  onChange={handleChange}
+                />
+              </Form.Group>
 
-        <label htmlFor='dislikes'>Dislikes</label>
-        <textarea
-          name='dislikes'
-          maxLength='60'
-          value={form.dislikes}
-          onChange={handleChange}
-        />
+              <Form.Group className="mb-2">
+                <Form.Label htmlFor='dislikes'>Dislikes</Form.Label>
+                <Form.Control
+                  name='dislikes'
+                  maxLength='60'
+                  value={form.dislikes}
+                  onChange={handleChange}
+                />
+              </Form.Group>
 
-        <button type='submit' className='btn'>
-          Submit
-        </button>
-      </form>
-      <p>{message}</p>
-      <div>
-        {Object.keys(errors).map((err, index) => (
-          <li key={index}>{err}</li>
-        ))}
-      </div>
+              <Button type='submit' variant='primary' className='btn px-4'>
+                Submit
+              </Button>
+            </Form>
+          </Col>
+        </Row>
+
+        <Row>
+          <p>{message}</p>
+          <div>
+            {Object.keys(errors).map((err, index) => (
+              <li key={index}>{err}</li>
+            ))}
+          </div>
+        </Row>
+      </Container>
     </>
   );
 };
 
-export default Form;
+export default PetForm;
