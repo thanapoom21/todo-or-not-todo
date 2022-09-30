@@ -19,10 +19,8 @@ const PetStore = ({ pets }) => {
         </Row>
         <Row>
           <Col>
-            <Link href="/new">
-              <Button variant='outline-primary'>
-                Add New Pet
-              </Button>
+            <Link href='/new'>
+              <Button variant='outline-primary'>Add New Pet</Button>
             </Link>
           </Col>
         </Row>
@@ -57,7 +55,10 @@ const PetStore = ({ pets }) => {
 
                     <div className='btn-container d-flex justify-content-between'>
                       <Link href='/[id]/edit' as={`/${pet._id}/edit`}>
-                        <Button variant='outline-danger' className='btn edit px-4'>
+                        <Button
+                          variant='outline-danger'
+                          className='btn edit px-4'
+                        >
                           Edit
                         </Button>
                       </Link>

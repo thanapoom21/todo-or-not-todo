@@ -120,7 +120,7 @@ const PetForm = ({ formId, petForm, forNewPet = true }) => {
         <Row>
           <Col md={{ span: 8 }} lg={{ span: 6 }}>
             <Form id={formId} onSubmit={handleSubmit}>
-              <Form.Group className="mb-2">
+              <Form.Group className='mb-2'>
                 <Form.Label htmlFor='name'>Name</Form.Label>
                 <Form.Control
                   type='text'
@@ -132,7 +132,7 @@ const PetForm = ({ formId, petForm, forNewPet = true }) => {
                 />
               </Form.Group>
 
-              <Form.Group className="mb-2">
+              <Form.Group className='mb-2'>
                 <Form.Label htmlFor='owner_name'>Owner</Form.Label>
                 <Form.Control
                   type='text'
@@ -144,7 +144,7 @@ const PetForm = ({ formId, petForm, forNewPet = true }) => {
                 />
               </Form.Group>
 
-              <Form.Group className="mb-2">
+              <Form.Group className='mb-2'>
                 <Form.Label htmlFor='species'>Species</Form.Label>
                 <Form.Control
                   type='text'
@@ -156,7 +156,7 @@ const PetForm = ({ formId, petForm, forNewPet = true }) => {
                 />
               </Form.Group>
 
-              <Form.Group className="mb-2">
+              <Form.Group className='mb-2'>
                 <Form.Label htmlFor='age'>Age</Form.Label>
                 <Form.Control
                   type='number'
@@ -166,7 +166,7 @@ const PetForm = ({ formId, petForm, forNewPet = true }) => {
                 />
               </Form.Group>
 
-              <Form.Group className="mb-2">
+              <Form.Group className='mb-2'>
                 <Form.Label htmlFor='huggable'>Can be hugged</Form.Label>
                 <Form.Check
                   type='checkbox'
@@ -177,7 +177,7 @@ const PetForm = ({ formId, petForm, forNewPet = true }) => {
                 />
               </Form.Group>
 
-              <Form.Group className="mb-2">
+              <Form.Group className='mb-2'>
                 <Form.Label htmlFor='diet'>Diet</Form.Label>
                 <Form.Control
                   name='diet'
@@ -187,7 +187,7 @@ const PetForm = ({ formId, petForm, forNewPet = true }) => {
                 />
               </Form.Group>
 
-              <Form.Group className="mb-2">
+              <Form.Group className='mb-2'>
                 <Form.Label htmlFor='image_url'>Image URL</Form.Label>
                 <Form.Control
                   type='url'
@@ -198,7 +198,7 @@ const PetForm = ({ formId, petForm, forNewPet = true }) => {
                 />
               </Form.Group>
 
-              <Form.Group className="mb-2">
+              <Form.Group className='mb-2'>
                 <Form.Label htmlFor='likes'>Likes</Form.Label>
                 <Form.Control
                   name='likes'
@@ -208,7 +208,7 @@ const PetForm = ({ formId, petForm, forNewPet = true }) => {
                 />
               </Form.Group>
 
-              <Form.Group className="mb-2">
+              <Form.Group className='mb-2'>
                 <Form.Label htmlFor='dislikes'>Dislikes</Form.Label>
                 <Form.Control
                   name='dislikes'
