@@ -34,29 +34,25 @@ button:focus {
 
 /*** This style comes from index style jsx from nextjs-mongodb & docker-getting-started tutorial ***/
 
-.landing
-.title a:hover,
-.title a:focus,
-.title a:active {
+.landing .title a:hover,
+.landing .title a:focus,
+.landing .title a:active {
   text-decoration: underline;
 }
 
-.landing
-.title {
+.landing .title {
   margin: 0;
   line-height: 1.15;
   font-size: 4rem;
 }
 
-.landing
-.title, 
-.subtitle,
-.description {
+.landing .title,
+.landing .subtitle,
+.landing .description {
   text-align: center;
 }
 
-.landing
-.card {
+.landing .card {
   margin: 1rem;
   flex-basis: 45%;
   padding: 1.5rem;
@@ -68,31 +64,27 @@ button:focus {
   transition: color 0.15s ease, border-color 0.15s ease;
 }
 
-.landing 
-.card:hover,
-.card:focus,
-.card:active {
+.landing .card:hover,
+.landing .card:focus,
+.landing .card:active {
   background-color: #F25F5C;
   color: #fff;
   border-color: #eaeaea;
 }
 
-.landing 
-.card h3 {
+.landing .card h3 {
   margin: 0 0 1rem 0;
   font-size: 1.5rem;
 }
 
-.landing
-.disabled-item {
+.landing .disabled-item {
   color: #eee;
   border-color: #eee;
 }
 
-.landing
-.disabled-item:hover,
-.disabled-item:focus,
-.disabled-item:active {
+.landing .disabled-item:hover,
+.landing .disabled-item:focus,
+.landing .disabled-item:active {
   background-color: #fff;
   color: #dedbdb;
   border-color: #dedbdb;
@@ -100,6 +92,7 @@ button:focus {
 
 /* Start Calculator app */
 @import 'https://fonts.googleapis.com/css?family=Share+Tech+Mono';
+
 @font-face {
   font-family: "Digital";
   src: url("//db.onlinewebfonts.com/t/8e22783d707ad140bffe18b2a3812529.eot");
@@ -148,6 +141,7 @@ button:focus {
   background: rgba(94, 8, 8, 0.5);
   z-index: 3;
 }
+
 /* End Calculator app */
 
 /* Start Clock app */
@@ -164,6 +158,7 @@ button:focus {
 #container .timer #time-left {
   font-family: digital;
 }
+
 #container .timer .timer-control button:active {
   color: #13353a;
 }
@@ -175,6 +170,7 @@ button:focus {
   color: #13353a;
   cursor: pointer;
 }
+
 /* End Clock app */
 
 /* Start Tic Tac Toe app */
