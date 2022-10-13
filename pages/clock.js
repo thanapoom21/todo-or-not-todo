@@ -42,16 +42,30 @@ const TimerLengthControl = ({
         </Col>
         <Col className='d-flex justify-content-between'>
           <button className='btn-level' id={minID} onClick={onClick} value='-'>
-            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fillRule="currentColor" className="bi bi-arrow-down-circle-fill" viewBox="0 0 16 16">
-              <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v5.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V4.5z" />
+            <svg
+              xmlns='http://www.w3.org/2000/svg'
+              width='30'
+              height='30'
+              fillRule='currentColor'
+              className='bi bi-arrow-down-circle-fill'
+              viewBox='0 0 16 16'
+            >
+              <path d='M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 4.5a.5.5 0 0 0-1 0v5.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V4.5z' />
             </svg>
           </button>
           <div className='btn-level' id={lengthID}>
             {length}
           </div>
           <button className='btn-level' id={addID} onClick={onClick} value='+'>
-            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fillRule="currentColor" className="bi bi-arrow-up-circle-fill" viewBox="0 0 16 16">
-              <path d="M16 8A8 8 0 1 0 0 8a8 8 0 0 0 16 0zm-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V11.5z" />
+            <svg
+              xmlns='http://www.w3.org/2000/svg'
+              width='30'
+              height='30'
+              fillRule='currentColor'
+              className='bi bi-arrow-up-circle-fill'
+              viewBox='0 0 16 16'
+            >
+              <path d='M16 8A8 8 0 1 0 0 8a8 8 0 0 0 16 0zm-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V11.5z' />
             </svg>
           </button>
         </Col>
@@ -206,7 +220,10 @@ class Timer extends React.Component {
   }
   render() {
     return (
-      <Container id="clockapp" className='d-flex flex-column justify-content-center mt-5'>
+      <Container
+        id='clockapp'
+        className='d-flex flex-column justify-content-center mt-5'
+      >
         <Row>
           <Col md={{ span: 12 }}>
             <h1>Clock App</h1>
@@ -242,18 +259,39 @@ class Timer extends React.Component {
             </div>
             <div className='timer-control'>
               <button id='start_stop' onClick={this.timerControl}>
-                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fillRule="currentColor" className="bi bi-play-circle" viewBox="0 0 16 16">
-                  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
-                  <path d="M6.271 5.055a.5.5 0 0 1 .52.038l3.5 2.5a.5.5 0 0 1 0 .814l-3.5 2.5A.5.5 0 0 1 6 10.5v-5a.5.5 0 0 1 .271-.445z" />
+                <svg
+                  xmlns='http://www.w3.org/2000/svg'
+                  width='30'
+                  height='30'
+                  fillRule='currentColor'
+                  className='bi bi-play-circle'
+                  viewBox='0 0 16 16'
+                >
+                  <path d='M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z' />
+                  <path d='M6.271 5.055a.5.5 0 0 1 .52.038l3.5 2.5a.5.5 0 0 1 0 .814l-3.5 2.5A.5.5 0 0 1 6 10.5v-5a.5.5 0 0 1 .271-.445z' />
                 </svg>
-                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fillRule="currentColor" className="bi bi-pause-circle" viewBox="0 0 16 16">
-                  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
-                  <path d="M5 6.25a1.25 1.25 0 1 1 2.5 0v3.5a1.25 1.25 0 1 1-2.5 0v-3.5zm3.5 0a1.25 1.25 0 1 1 2.5 0v3.5a1.25 1.25 0 1 1-2.5 0v-3.5z" />
+                <svg
+                  xmlns='http://www.w3.org/2000/svg'
+                  width='30'
+                  height='30'
+                  fillRule='currentColor'
+                  className='bi bi-pause-circle'
+                  viewBox='0 0 16 16'
+                >
+                  <path d='M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z' />
+                  <path d='M5 6.25a1.25 1.25 0 1 1 2.5 0v3.5a1.25 1.25 0 1 1-2.5 0v-3.5zm3.5 0a1.25 1.25 0 1 1 2.5 0v3.5a1.25 1.25 0 1 1-2.5 0v-3.5z' />
                 </svg>
               </button>
               <button id='reset' onClick={this.reset}>
-                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fillRule="currentColor" className="bi bi-eraser" viewBox="0 0 16 16">
-                  <path d="M8.086 2.207a2 2 0 0 1 2.828 0l3.879 3.879a2 2 0 0 1 0 2.828l-5.5 5.5A2 2 0 0 1 7.879 15H5.12a2 2 0 0 1-1.414-.586l-2.5-2.5a2 2 0 0 1 0-2.828l6.879-6.879zm2.121.707a1 1 0 0 0-1.414 0L4.16 7.547l5.293 5.293 4.633-4.633a1 1 0 0 0 0-1.414l-3.879-3.879zM8.746 13.547 3.453 8.254 1.914 9.793a1 1 0 0 0 0 1.414l2.5 2.5a1 1 0 0 0 .707.293H7.88a1 1 0 0 0 .707-.293l.16-.16z" />
+                <svg
+                  xmlns='http://www.w3.org/2000/svg'
+                  width='30'
+                  height='30'
+                  fillRule='currentColor'
+                  className='bi bi-eraser'
+                  viewBox='0 0 16 16'
+                >
+                  <path d='M8.086 2.207a2 2 0 0 1 2.828 0l3.879 3.879a2 2 0 0 1 0 2.828l-5.5 5.5A2 2 0 0 1 7.879 15H5.12a2 2 0 0 1-1.414-.586l-2.5-2.5a2 2 0 0 1 0-2.828l6.879-6.879zm2.121.707a1 1 0 0 0-1.414 0L4.16 7.547l5.293 5.293 4.633-4.633a1 1 0 0 0 0-1.414l-3.879-3.879zM8.746 13.547 3.453 8.254 1.914 9.793a1 1 0 0 0 0 1.414l2.5 2.5a1 1 0 0 0 .707.293H7.88a1 1 0 0 0 .707-.293l.16-.16z' />
                 </svg>
               </button>
             </div>
