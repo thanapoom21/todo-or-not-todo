@@ -167,10 +167,12 @@ const PetForm = ({ formId, petForm, forNewPet = true }) => {
               </Form.Group>
 
               <Form.Group className='mb-2'>
-                <Form.Label htmlFor='huggable'>Can be hugged</Form.Label>
+                <Form.Label htmlFor='characteristics'>
+                  Characteristics
+                </Form.Label>
                 <Form.Check
                   type='checkbox'
-                  label='huggable RB'
+                  label='huggable'
                   name='huggable'
                   checked={form.huggable}
                   onChange={handleChange}
