@@ -29,7 +29,7 @@ export default function Home({ isConnected }) {
 
           <Row>
             <Col md={6} lg={4}>
-              <Link href='/todo' passHref>
+              <Link href='/todo' passHref legacyBehavior>
                 <a className='card'>
                   <h3>Todo App &rarr;</h3>
                   <p>
@@ -40,7 +40,7 @@ export default function Home({ isConnected }) {
               </Link>
             </Col>
             <Col md={6} lg={4}>
-              <Link href='/pokemon-list' passHref>
+              <Link href='/pokemon-list' passHref legacyBehavior>
                 <a className='card'>
                   <h3>Pokemon App &rarr;</h3>
                   <p>
@@ -51,7 +51,7 @@ export default function Home({ isConnected }) {
               </Link>
             </Col>
             <Col md={6} lg={4}>
-              <Link href='/calculator' passHref>
+              <Link href='/calculator' passHref legacyBehavior>
                 <a className='card'>
                   <h3>Calculator App &rarr;</h3>
                   <p>
@@ -62,7 +62,7 @@ export default function Home({ isConnected }) {
               </Link>
             </Col>
             <Col md={6} lg={4}>
-              <Link href='/clock' passHref>
+              <Link href='/clock' passHref legacyBehavior>
                 <a className='card'>
                   <h3>Clock App &rarr;</h3>
                   <p>
@@ -73,7 +73,7 @@ export default function Home({ isConnected }) {
               </Link>
             </Col>
             <Col md={6} lg={4}>
-              <Link href='/tictactoe' passHref>
+              <Link href='/tictactoe' passHref legacyBehavior>
                 <a className='card'>
                   <h3>Tic Tac Toe App &rarr;</h3>
                   <p>
@@ -84,7 +84,7 @@ export default function Home({ isConnected }) {
               </Link>
             </Col>
             <Col md={6} lg={4}>
-              <Link href='/pet-store' passHref>
+              <Link href='/pet-store' passHref legacyBehavior>
                 <a className='card'>
                   <h3>Pet Store App &rarr;</h3>
                   <p>
@@ -99,7 +99,7 @@ export default function Home({ isConnected }) {
       </main>
 
       <footer className='justify-content-center d-flex'>
-        <p>Powered by musii</p>
+        <p>Powered by musii with love, sweat, and pain.</p>
       </footer>
     </>
   );
