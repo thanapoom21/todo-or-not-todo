@@ -6,8 +6,11 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
+import { useRouter } from 'next/router';
 
 const PetStore = ({ pets }) => {
+  const router = useRouter();
+
   return (
     <>
       <Container className='d-flex flex-column justify-content-center mt-5'>
@@ -79,7 +82,10 @@ const PetStore = ({ pets }) => {
                         </div>
 
                         <div className='btn-container d-flex justify-content-between'>
-                          <Link href='/[id]/edit' as={`/${pet._id}/edit`}>
+                          <Link
+                            href='/pet-store/[id]/edit'
+                            as={`/pet-store/${pet._id}/edit`}
+                          >
                             <Button
                               variant='outline-danger'
                               className='btn edit px-4'
@@ -87,7 +93,10 @@ const PetStore = ({ pets }) => {
                               Edit
                             </Button>
                           </Link>
-                          <Link href='/[id]' as={`/${pet._id}`}>
+                          <Link
+                            href='/pet-store/[id]'
+                            as={`/pet-store/${pet._id}`}
+                          >
                             <Button variant='primary' className='btn view px-4'>
                               View
                             </Button>
@@ -101,6 +110,14 @@ const PetStore = ({ pets }) => {
             </Row>
           </>
         )}
+        <Row>
+          <Col md={{ span: 12 }}>
+            <hr />
+            <Button variant='outline-primary' onClick={() => router.push('/')}>
+              Go Back
+            </Button>
+          </Col>
+        </Row>
       </Container>
     </>
   );
