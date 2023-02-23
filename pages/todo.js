@@ -7,8 +7,11 @@ import Button from 'react-bootstrap/Button';
 import InputGroup from 'react-bootstrap/InputGroup';
 import dbConnect from '../lib/dbConnect';
 import Item from '../models/Item';
+import { useRouter } from 'next/router';
 
 const Todo = ({ todos }) => {
+  const router = useRouter();
+
   return (
     <Container className='d-flex flex-column justify-content-center mt-5'>
       <Row>
@@ -20,6 +23,14 @@ const Todo = ({ todos }) => {
       <Row>
         <Col md={{ offset: 3, span: 6 }}>
           <TodoListCard todoItems={todos} />
+        </Col>
+      </Row>
+      <Row>
+        <Col md={{ span: 12 }}>
+          <hr />
+          <Button variant='outline-primary' onClick={() => router.push('/')}>
+            Go Back
+          </Button>
         </Col>
       </Row>
     </Container>

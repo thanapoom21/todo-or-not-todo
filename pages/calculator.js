@@ -1,7 +1,9 @@
 import { useState } from 'react';
+import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import { useRouter } from 'next/router';
 
 // Variables
 const isOperator = /[x/+‑]/,
@@ -21,6 +23,8 @@ const Calculator = () => {
   const [currentSign, setCurrentSign] = useState('pos');
   const [lastClicked, setLastClicked] = useState('');
   const [evaluated, setEvaluated] = useState(false);
+
+  const router = useRouter();
 
   // warn user that they cannot add more digit
   const maxDigitWarning = () => {
@@ -166,6 +170,14 @@ const Calculator = () => {
               operators={handleOperators}
             />
           </div>
+        </Col>
+      </Row>
+      <Row>
+        <Col md={{ span: 12 }}>
+          <hr />
+          <Button variant='outline-primary' onClick={() => router.push('/')}>
+            Go Back
+          </Button>
         </Col>
       </Row>
     </Container>

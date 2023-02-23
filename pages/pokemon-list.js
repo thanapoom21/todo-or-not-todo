@@ -5,12 +5,15 @@ import Col from 'react-bootstrap/Col';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import ListGroup from 'react-bootstrap/ListGroup';
+import { useRouter } from 'next/router';
 
 const PokemonList = () => {
   const [allPokemons, setAllPokemons] = useState([]);
   const [loadPokemonEndpoint, setLoadPokemonEndpoint] = useState(
     `https://pokeapi.co/api/v2/pokemon?limit=3`,
   );
+
+  const router = useRouter();
 
   const getPokemons = () => {
     fetch(loadPokemonEndpoint)
@@ -64,6 +67,14 @@ const PokemonList = () => {
             />
           );
         })}
+      </Row>
+      <Row>
+        <Col md={{ span: 12 }}>
+          <hr />
+          <Button variant='outline-primary' onClick={() => router.push('/')}>
+            Go Back
+          </Button>
+        </Col>
       </Row>
     </Container>
   );
