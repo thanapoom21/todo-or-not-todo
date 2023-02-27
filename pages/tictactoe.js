@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
+import { useRouter } from 'next/router';
 
 const Square = ({ onClick, value }) => {
   return (
@@ -35,6 +36,90 @@ const Board = ({ squares, onClick }) => {
         {renderSquare(8)}
       </div>
     </div>
+  );
+};
+
+// This is the functional component that I refactored using class component code.
+// 'history' state had to be renamed because of naming crash.
+// It seems like it is working without any error.
+const GameFunctional = () => {
+  const [historyState, setHistoryState] = useState([
+    { squares: Array(9).fill(null) },
+  ]);
+  const [stepNumber, setStepNumber] = useState(0);
+  const [xIsNext, setXIsNext] = useState(true);
+  const current = historyState[stepNumber];
+  const winner = calculateWinner(current.squares);
+
+  const router = useRouter();
+
+  const moves = historyState.map((step, move) => {
+    const desc = move ? 'Go to move #' + move : 'Go to game start';
+
+    return (
+      <li key={move} className='mb-2'>
+        <Button variant='outline-primary' onClick={() => jumpTo(move)}>
+          {desc}
+        </Button>
+      </li>
+    );
+  });
+  let status;
+  if (winner) {
+    status = 'Winner: ' + winner;
+  } else {
+    status = 'Next player: ' + (xIsNext ? 'X' : 'O');
+  }
+
+  const handleClick = (i) => {
+    const history = historyState.slice(0, stepNumber + 1);
+    const current = history[history.length - 1];
+    const squares = current.squares.slice();
+    if (calculateWinner(squares) || squares[i]) {
+      return;
+    }
+
+    squares[i] = xIsNext ? 'X' : 'O';
+
+    setHistoryState(history.concat([{ squares: squares }]));
+    setStepNumber(history.length);
+    setXIsNext(!xIsNext);
+  };
+
+  const jumpTo = (step) => {
+    setStepNumber(step);
+    setXIsNext(step % 2 === 0);
+  };
+
+  return (
+    <Container
+      id='tictactoeapp'
+      className='d-flex flex-column justify-content-center mt-5'
+    >
+      <Row>
+        <Col md={{ span: 12 }}>
+          <h1>Tic Tac Toe App</h1>
+          <hr />
+        </Col>
+      </Row>
+      <div className='game'>
+        <div className='game-board'>
+          <Board squares={current.squares} onClick={(i) => handleClick(i)} />
+        </div>
+        <div className='game-info'>
+          <div>{status}</div>
+          <ol>{moves}</ol>
+        </div>
+      </div>
+      <Row>
+        <Col md={{ span: 12 }}>
+          <hr />
+          <Button variant='outline-primary' onClick={() => router.push('/')}>
+            Go Back
+          </Button>
+        </Col>
+      </Row>
+    </Container>
   );
 };
 
@@ -148,4 +233,4 @@ const calculateWinner = (squares) => {
   return null;
 };
 
-export default Game;
+export default GameFunctional;

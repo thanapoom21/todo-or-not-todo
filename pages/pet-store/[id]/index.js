@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
-import dbConnect from '../../lib/dbConnect';
-import Pet from '../../models/Pet';
+import dbConnect from '../../../lib/dbConnect';
+import Pet from '../../../models/Pet';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -20,7 +20,8 @@ const PetPage = ({ pet }) => {
       await fetch(`/api/pets/${petID}`, {
         method: 'Delete',
       });
-      router.push('/');
+      // previously, this was pushed to "/" but I decided to move the pet-store to its own folder and change the value.
+      router.push('/pet-store');
     } catch (error) {
       setMessage('Failed to delete the pet.');
     }
@@ -57,7 +58,10 @@ const PetPage = ({ pet }) => {
                 </div>
 
                 <div className='btn-container d-flex justify-content-between'>
-                  <Link href='/[id]/edit' as={`/${pet._id}/edit`}>
+                  <Link
+                    href='/pet-store/[id]/edit'
+                    as={`/pet-store/${pet._id}/edit`}
+                  >
                     <Button variant='outline-danger' className='btn edit px-4'>
                       Edit
                     </Button>
