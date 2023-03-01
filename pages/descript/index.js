@@ -98,12 +98,12 @@ const FruitItem = ({ fruit }) => {
   );
 };
 
-const Def = () => {
+const Descript = () => {
   return (
     <Container className='d-flex flex-column justify-content-center mt-5'>
       <Row>
         <Col md={{ span: 12 }}>
-          <h1>Def App</h1>
+          <h1>Descript App</h1>
           <hr />
         </Col>
       </Row>
@@ -114,27 +114,27 @@ const Def = () => {
             expand='lg'
             bg='dark'
             variant='dark'
-            id='def-app-navbar'
+            id='descript-navbar'
           >
             <Container>
-              <Navbar.Brand href='/def-app'>Def</Navbar.Brand>
+              <Navbar.Brand href='/descript'>Descript</Navbar.Brand>
               <Navbar.Toggle aria-controls='responsive-navbar-nav' />
               <Navbar.Collapse id='responsive-navbar-nav'>
                 <Nav className='me-auto'>
-                  <Nav.Link href='/def-app/movies'>Movies</Nav.Link>
-                  <Nav.Link href='/def-app/sports'>Sports</Nav.Link>
-                  <Nav.Link href='/def-app/countries'>Countries</Nav.Link>
+                  <Nav.Link href='/descript/movies'>Movies</Nav.Link>
+                  <Nav.Link href='/descript/sports'>Sports</Nav.Link>
+                  <Nav.Link href='/descript/countries'>Countries</Nav.Link>
                   <NavDropdown title='Categories' id='collasible-nav-dropdown'>
-                    <NavDropdown.Item href='/def-app/fruits'>Fruits</NavDropdown.Item>
-                    <NavDropdown.Item href='/def-app/animals'>Animals</NavDropdown.Item>
-                    <NavDropdown.Item href='/def-app/cars'>Cars</NavDropdown.Item>
+                    <NavDropdown.Item href='/descript/fruits'>Fruits</NavDropdown.Item>
+                    <NavDropdown.Item href='/descript/animals'>Animals</NavDropdown.Item>
+                    <NavDropdown.Item href='/descript/cars'>Cars</NavDropdown.Item>
                     <NavDropdown.Divider />
-                    <NavDropdown.Item href='/def-app/others'>Others</NavDropdown.Item>
+                    <NavDropdown.Item href='/descript/others'>Others</NavDropdown.Item>
                   </NavDropdown>
                 </Nav>
                 <Nav>
-                  <Nav.Link href='/def-app/synonym'>Synonym</Nav.Link>
-                  <Nav.Link eventKey={2} href='/def-app/antonym'>
+                  <Nav.Link href='/descript/synonym'>Synonym</Nav.Link>
+                  <Nav.Link eventKey={2} href='/descript/antonym'>
                     Antonym
                   </Nav.Link>
                 </Nav>
@@ -179,4 +179,4 @@ const Def = () => {
   );
 };
 
-export default Def;
+export default Descript;
