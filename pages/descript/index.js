@@ -167,7 +167,7 @@ const Descript = () => {
         <Col>
           <nav
             id='navbar-example3'
-            className='h-100 flex-column align-items-stretch pe-4 border-end'
+            className='h-100 flex-column align-items-stretch pe-4 border-end d-none d-md-block'
           >
             <nav className='nav nav-pills flex-column'>
               <ScrollspySideNav fruits={fruits} />
