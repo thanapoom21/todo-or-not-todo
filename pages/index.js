@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import Link from 'next/link';
+import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -30,68 +31,78 @@ export default function Home({ isConnected }) {
           <Row>
             <Col md={6} lg={4}>
               <Link href='/todo' passHref legacyBehavior>
-                <a className='card'>
+                <Button className='card' variant="outline-secondary">
                   <h3>Todo App &rarr;</h3>
                   <p>
                     Just a simple todo app with toggling, adding, and removing
                     features. 10 items limited.
                   </p>
-                </a>
+                </Button>
               </Link>
             </Col>
             <Col md={6} lg={4}>
               <Link href='/pokemon-list' passHref legacyBehavior>
-                <a className='card'>
+                <Button className='card' variant="outline-secondary">
                   <h3>Pokemon App &rarr;</h3>
                   <p>
                     Just a simple Pokemon app that shows its name, type and cute
                     image.
                   </p>
-                </a>
+                </Button>
               </Link>
             </Col>
             <Col md={6} lg={4}>
               <Link href='/calculator' passHref legacyBehavior>
-                <a className='card'>
+                <Button className='card' variant="outline-secondary">
                   <h3>Calculator App &rarr;</h3>
                   <p>
                     Just a simple calculator app that shows its operation,
                     results and other features.
                   </p>
-                </a>
+                </Button>
               </Link>
             </Col>
             <Col md={6} lg={4}>
               <Link href='/clock' passHref legacyBehavior>
-                <a className='card'>
+                <Button className='card' variant="outline-secondary" disabled>
                   <h3>Clock App &rarr;</h3>
                   <p>
                     Just a simple calculator app that shows its operation,
                     results and other features.
                   </p>
-                </a>
+                </Button>
               </Link>
             </Col>
             <Col md={6} lg={4}>
               <Link href='/tictactoe' passHref legacyBehavior>
-                <a className='card'>
+                <Button className='card' variant="outline-secondary">
                   <h3>Tic Tac Toe App &rarr;</h3>
                   <p>
                     Just a simple calculator app that shows its operation,
                     results and other features.
                   </p>
-                </a>
+                </Button>
               </Link>
             </Col>
             <Col md={6} lg={4}>
               <Link href='/pet-store' passHref legacyBehavior>
-                <a className='card'>
+                <Button className='card' variant="outline-secondary">
                   <h3>Pet Store App &rarr;</h3>
                   <p>
                     Just a simple calculator app that shows its operation,
                     results and other features.
                   </p>
-                </a>
+                </Button>
+              </Link>
+            </Col>
+            <Col md={6} lg={4}>
+              <Link href='/pet-store' passHref legacyBehavior>
+                <Button className='card' variant="outline-secondary" disabled>
+                  <h3>Upcoming App &rarr;</h3>
+                  <p>
+                    It is not the time to launch the app. Coming soon. 
+                  </p>
+                </Button>
               </Link>
             </Col>
           </Row>
