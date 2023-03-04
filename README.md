@@ -1,5 +1,7 @@
 ## Simple apps using NextJS and MongoDB
 
+While the Bootstrap CSS can be used with any framework, the Bootstrap JavaScript is not fully compatible with JavaScript frameworks like React, Vue, and Angular which assume full knowledge of the DOM. Both Bootstrap and the framework may attempt to mutate the same DOM element, resulting in bugs like dropdowns that are stuck in the “open” position. `.active` is not automatically added when implementing scrollspy. I assumed that it has something to do with the lack of bootstrap.js file since it is not fully compatible with UI framework like React.
+
 [NextJS](https://nextjs.org/) is a flexible React framework that will help you create a web application in no time. However, you have to be patient with it if you do not have some experience with any framework before. It will be confusing at first but you'll get better when you learn more about it.
 
 [MongoDB](https://www.mongodb.com/) is a general purpose, document-based, distributed database built for modern application developers and for the cloud era. This example will show you how to connect to and use MongoDB as your backend for your Next.js app. Mongoose is installed in this repo to help with Schema and Models of the database. First of all, you're gonna need to know the difference of database, collection, and document, how to connect to a certain project and database, how mongoose know which collection to use, how Schema works, and many more. Then how can you GET, POST, PUT or edit, DELETE data on the database with CRUD operations
