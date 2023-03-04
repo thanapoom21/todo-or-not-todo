@@ -31,29 +31,29 @@ export default function Home({ isConnected }) {
           <Row>
             <Col md={6} lg={4}>
               <Link href='/todo' passHref legacyBehavior>
-                <Button className='card' variant="outline-secondary">
+                <Button className='card' variant='outline-secondary'>
                   <h3>Todo App &rarr;</h3>
                   <p>
                     Just a simple todo app with toggling, adding, and removing
-                    features. 10 items limited.
+                    features. Limited 10 items.
                   </p>
                 </Button>
               </Link>
             </Col>
             <Col md={6} lg={4}>
               <Link href='/pokemon-list' passHref legacyBehavior>
-                <Button className='card' variant="outline-secondary">
+                <Button className='card' variant='outline-secondary'>
                   <h3>Pokemon App &rarr;</h3>
                   <p>
                     Just a simple Pokemon app that shows its name, type and cute
-                    image.
+                    images.
                   </p>
                 </Button>
               </Link>
             </Col>
             <Col md={6} lg={4}>
               <Link href='/calculator' passHref legacyBehavior>
-                <Button className='card' variant="outline-secondary">
+                <Button className='card' variant='outline-secondary'>
                   <h3>Calculator App &rarr;</h3>
                   <p>
                     Just a simple calculator app that shows its operation,
@@ -64,44 +64,41 @@ export default function Home({ isConnected }) {
             </Col>
             <Col md={6} lg={4}>
               <Link href='/clock' passHref legacyBehavior>
-                <Button className='card' variant="outline-secondary" disabled>
+                <Button className='card' variant='outline-secondary' disabled>
                   <h3>Clock App &rarr;</h3>
                   <p>
-                    Just a simple calculator app that shows its operation,
-                    results and other features.
+                    A WIP clock app that can start, stop, and reset time. Also,
+                    it has a beeping feature .
                   </p>
                 </Button>
               </Link>
             </Col>
             <Col md={6} lg={4}>
               <Link href='/tictactoe' passHref legacyBehavior>
-                <Button className='card' variant="outline-secondary">
+                <Button className='card' variant='outline-secondary'>
                   <h3>Tic Tac Toe App &rarr;</h3>
                   <p>
-                    Just a simple calculator app that shows its operation,
-                    results and other features.
+                    It shows how to create components & implement them
+                    with props & state.
                   </p>
                 </Button>
               </Link>
             </Col>
             <Col md={6} lg={4}>
               <Link href='/pet-store' passHref legacyBehavior>
-                <Button className='card' variant="outline-secondary">
+                <Button className='card' variant='outline-secondary'>
                   <h3>Pet Store App &rarr;</h3>
                   <p>
-                    Just a simple calculator app that shows its operation,
-                    results and other features.
+                    Simply a listing for pets. Dynamic routing is key in moving from pet to pet.
                   </p>
                 </Button>
               </Link>
             </Col>
             <Col md={6} lg={4}>
               <Link href='/pet-store' passHref legacyBehavior>
-                <Button className='card' variant="outline-secondary" disabled>
+                <Button className='card' variant='outline-secondary' disabled>
                   <h3>Upcoming App &rarr;</h3>
-                  <p>
-                    It is not the time to launch the app. Coming soon. 
-                  </p>
+                  <p>It is not the time to launch the app. Coming soon.</p>
                 </Button>
               </Link>
             </Col>

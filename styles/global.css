@@ -67,7 +67,7 @@ button:focus {
 .landing .card:hover,
 .landing .card:focus,
 .landing .card:active {
-  background-color: #F25F5C;
+  background-color: #0d6efd;
   color: #fff;
   border-color: #eaeaea;
 }
