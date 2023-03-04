@@ -94,6 +94,8 @@ Sometimes, I forgot to and a set of parentheses after `.json`. Also, I accidenta
 
 Promise with async & await could be the culprit some time if you forget to add the keywords.
 
+There is a known issue with running a container on a different architecture, for instance, arm64 by MacOS M1 chip and amd64 by MacOS Intel chip. `CrashLoopBackoff` is the warning that will be shown in logs and containers/pods will keep on restarting forever.
+
 ### Questions & Answers
 
 1. How can I update the running container without killing it?
