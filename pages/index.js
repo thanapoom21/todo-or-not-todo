@@ -63,17 +63,6 @@ export default function Home({ isConnected }) {
               </Link>
             </Col>
             <Col md={6} lg={4}>
-              <Link href='/clock' passHref legacyBehavior>
-                <Button className='card' variant='outline-secondary' disabled>
-                  <h3>Clock App &rarr;</h3>
-                  <p>
-                    A WIP clock app that can start, stop, and reset time. Also,
-                    it has a beeping feature .
-                  </p>
-                </Button>
-              </Link>
-            </Col>
-            <Col md={6} lg={4}>
               <Link href='/tictactoe' passHref legacyBehavior>
                 <Button className='card' variant='outline-secondary'>
                   <h3>Tic Tac Toe App &rarr;</h3>
@@ -90,6 +79,27 @@ export default function Home({ isConnected }) {
                   <h3>Pet Store App &rarr;</h3>
                   <p>
                     Simply a listing for pets. Dynamic routing is key in moving from pet to pet.
+                  </p>
+                </Button>
+              </Link>
+            </Col>
+            <Col md={6} lg={4}>
+              <Link href='/descript' passHref legacyBehavior>
+                <Button className='card' variant='outline-secondary'>
+                  <h3>Descript App &rarr;</h3>
+                  <p>
+                    A webpage displaying names and description with scrollspy. Plain & simple.
+                  </p>
+                </Button>
+              </Link>
+            </Col>
+            <Col md={6} lg={4}>
+              <Link href='/clock' passHref legacyBehavior>
+                <Button className='card' variant='outline-secondary' disabled>
+                  <h3>Clock App &rarr;</h3>
+                  <p>
+                    A WIP clock app that can start, stop, and reset time. Also,
+                    it has a beeping feature .
                   </p>
                 </Button>
               </Link>
