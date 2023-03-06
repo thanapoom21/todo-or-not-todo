@@ -1,6 +1,7 @@
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import Button from 'react-bootstrap/Button';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
@@ -152,7 +153,7 @@ const Descript = () => {
             className='scrollspy-example'
             style={{
               position: 'relative',
-              height: '600px',
+              height: '550px',
               overflow: 'scroll',
             }}
             tabIndex='0'
@@ -173,6 +174,14 @@ const Descript = () => {
               <ScrollspySideNav fruits={fruits} />
             </nav>
           </nav>
+        </Col>
+      </Row>
+      <Row>
+        <Col md={{ span: 12 }}>
+          <hr />
+          <Button variant='outline-primary' onClick={() => router.push('/')}>
+            Go Back
+          </Button>
         </Col>
       </Row>
     </Container>
