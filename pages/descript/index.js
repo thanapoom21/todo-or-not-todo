@@ -5,6 +5,7 @@ import Button from 'react-bootstrap/Button';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
+import { useRouter } from 'next/router';
 
 const fruits = [
   {
@@ -100,6 +101,7 @@ const FruitItem = ({ fruit }) => {
 };
 
 const Descript = () => {
+  const router = useRouter()
   return (
     <Container className='d-flex flex-column justify-content-center mt-5'>
       <Row>
